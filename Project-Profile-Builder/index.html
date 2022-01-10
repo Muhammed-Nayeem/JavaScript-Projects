@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile-Builder</title>
+  <link rel="stylesheet" href="./CSS/custom.css">
+</head>
+<body>
+  <section class="profile-section">
+    <div class="container">
+      <div class="app-title">
+        <h1>Profile Builder</h1>
+      </div>
+      <div class="content">
+        <aside class="profile-form">
+          <form action="" id="forms">
+            <div class="form-check">
+              <label for="firstName">Enter First-Name:</label>
+              <input type="text" name="firstName" id="firstName" placeholder="First-Name">
+            </div>
+            <div class="form-check">
+              <label for="lastName">Enter Last-Name:</label>
+              <input type="text" name="lastName" id="lastName" placeholder="Last-Name">
+            </div>
+            <div class="form-check">
+              <label for="age">Enter Your Age:</label>
+              <input type="number" name="age" id="age" placeholder="Your Age">
+            </div>
+            <div class="form-check">
+              <label for="profession">Profession:</label>
+              <input type="text" name="profession" id="profession" placeholder="Enter Your Profession">
+            </div>
+            <div class="form-check">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" placeholder="example@mail.com">
+            </div>
+            <div class="form-check">
+              <label for="phone">Phone:</label>
+              <input type="number" name="phone" id="phone" placeholder="Enter Phone Number">
+            </div>
+            <div class="form-check">
+              <label for="country">Select Your Country:</label>
+              <select name="country" id="country">
+                <option value="" selected disabled hidden>Choose here</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="America">America</option>
+                <option value="Canada">Canada</option>
+                <option value="England">England</option>
+              </select>
+            </div>
+            <input type="submit" value="Submit" id="submit-btn" class="sub-btn">
+          </form>
+        </aside>
+        <div class="profile-box" id="show-profile">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- include js file -->
+  <script src="./JavaScript/app.js"></script>
+</body>
+</html>
