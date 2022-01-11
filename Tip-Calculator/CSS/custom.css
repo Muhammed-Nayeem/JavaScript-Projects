@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #cccccc;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  padding: 15px 0 20px 0;
+}
+.tipCalculatorArea {
+  width: 50%;
+  padding: 20px 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #cccccc;
+  border-radius: 10px;
+  box-shadow: 7px 7px 14px #adadad, -7px -7px 14px #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tipCalculator__form {
+  flex-basis: 50%;
+}
+.tipCalculator__input {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+.tipCalculator__input label {
+  display: block;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #565656;
+}
+.tipCalculator__input input {
+  width: 80%;
+  padding: 18px 20px;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  border-radius: 3px;
+  background: #cccccc;
+  box-shadow: inset 5px 5px 7px #b6b6b6, inset -5px -5px 7px #e2e2e2;
+}
+.tipCalculator__data {
+  flex-basis: 45%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #b8b8b8, #dadada);
+  box-shadow: 5px 5px 7px #b6b6b6, -5px -5px 7px #e2e2e2;
+}
+.tip-box {
+  margin: 20px 0;
+}
+.tip-title {
+  color: #6c6a6a;
+  margin: 6px 0 6px 0;
+  text-transform: uppercase;
+}
+.tip-amount {
+  font-size: 25px;
+  color: #565656;
+}
