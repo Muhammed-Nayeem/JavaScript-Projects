@@ -8,6 +8,42 @@
     <link rel="stylesheet" href="./CSS/custom.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="title">
+        <h1>Tip Calculator</h1>
+      </div>
+      <div class="tipCalculatorArea">
+        <div class="tipCalculator__form">
+          <form action="" class="tipCalculator">
+            <div class="tipCalculator__input">
+              <label for="bill">Bill</label>
+              <input type="text" name="bill" id="bill" placeholder="Bill Amount">
+            </div>
+            <div class="tipCalculator__input">
+              <label for="tip">Tip</label>
+              <input type="text" name="tip" id="tip" placeholder="Tip Amount">
+            </div>
+            <div class="tipCalculator__input">
+              <label for="person">Person</label>
+              <input type="text" name="person" id="person" placeholder="Person Number">
+            </div>
+          </form>
+        </div>
+        <div class="tipCalculator__data">
+          <div class="tip-box">
+            <p class="tip-title">Tip</p>
+            <h3 class="tip-amount">BDT <span class="tip-per-person">0.00</span></h3>
+            <p class="tip-title">Per Person</p>
+          </div>
+          <div class="total-box">
+            <p class="tip-title">Total</p>
+            <h3 class="tip-amount">BDT <span class="amount-total">0.00</span></h3>
+            <p class="tip-title">Per Person</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS file include -->
     <script src="./JavaScript/app.js"></script>
   </body>
 </html>
