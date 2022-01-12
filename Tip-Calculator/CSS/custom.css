@@ -61,6 +61,12 @@ body {
   background: #cccccc;
   box-shadow: inset 5px 5px 7px #b6b6b6, inset -5px -5px 7px #e2e2e2;
 }
+.tipCalculator__input .error-msg {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #a81313;
+}
 .tipCalculator__data {
   flex-basis: 45%;
   text-align: center;
