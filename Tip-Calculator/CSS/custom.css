@@ -58,11 +58,11 @@ body {
   border: 0;
   outline: none;
   border-radius: 3px;
-  background: #cccccc;
+  background-color: #cccccc;
   box-shadow: inset 5px 5px 7px #b6b6b6, inset -5px -5px 7px #e2e2e2;
 }
 .tipCalculator__input .error-msg {
-  display: block;
+  display: none;
   font-size: 14px;
   margin-top: 10px;
   color: #a81313;
