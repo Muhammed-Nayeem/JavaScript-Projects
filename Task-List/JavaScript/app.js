@@ -23,31 +23,48 @@ function addTask(e) {
   e.preventDefault();
   let inputField = document.getElementById("input");
 
-  //create li element:
-  let item = createElements("li");
-  item.appendChild(document.createTextNode(inputField.value));
-  item.className = "list-group-item";
+  //input validate function:
+  if (inputValidate(inputField.value)) {
+    //create li element:
+    let item = createElements("li");
+    item.appendChild(document.createTextNode(inputField.value));
+    item.className = "list-group-item";
 
-  //create remove button:
-  let removeBtn = createElements("button");
-  removeBtn.textContent = "X";
-  removeBtn.className = "btn btn-danger btn-sm float-end delete";
+    //create remove button:
+    let removeBtn = createElements("button");
+    removeBtn.textContent = "X";
+    removeBtn.className = "btn btn-danger btn-sm float-end delete";
 
-  //append this remove button in li-item:
-  item.appendChild(removeBtn);
+    //append this remove button in li-item:
+    item.appendChild(removeBtn);
 
-  //append new item in listItems group:
-  listItems.appendChild(item);
-  inputField.value = "";
-  // this.reset();
+    //append new item in listItems group:
+    listItems.appendChild(item);
+    inputField.value = "";
+    // this.reset();
+  }
+}
+
+//define inputValidate function:
+function inputValidate(input) {
+  //if input value isn't empty:
+  if (input) {
+    if (confirm("Do you really want to add this in your item list?")) {
+      return true;
+    }
+  } else {
+    alert("You haven't entered any data! Please provide valid data!");
+  }
 }
 
 //define removeTask function:
 function removeTask(e) {
   if (e.target.classList.contains("delete")) {
-    // e.target.parentElement.remove();
-    let li = e.target.parentElement;
-    listItems.removeChild(li);
+    if (confirm("Are you sure?")) {
+      // e.target.parentElement.remove();
+      let li = e.target.parentElement;
+      listItems.removeChild(li);
+    }
   }
 }
 
