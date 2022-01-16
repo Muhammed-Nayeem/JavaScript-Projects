@@ -11,20 +11,7 @@ class Book {
 class UI {
   // display method: to display all the books on UI
   static displayBooks() {
-    const StoreBooks = [
-      {
-        title: "Book One",
-        author: "John Doe",
-        isbn: "mn12345",
-      },
-      {
-        title: "Book Two",
-        author: "John Doe",
-        isbn: "mn12345",
-      },
-    ];
-
-    const books = StoreBooks;
+    const books = Store.getBooks();
     books.forEach((book) => UI.addToBookList(book));
   }
 
@@ -48,6 +35,21 @@ class UI {
     }
   }
 
+  // show alert method: added and remove alert
+  static showAlert(message, className) {
+    const alertDiv = document.createElement("div");
+    alertDiv.className = `alert alert-${className}`;
+    alertDiv.appendChild(document.createTextNode(message));
+
+    const formElement = document.querySelector(".form-element");
+    formElement.insertAdjacentElement("afterbegin", alertDiv);
+
+    // vanishing alert message after 1 second
+    setTimeout(() => {
+      document.querySelector(".alert").remove();
+    }, 1000);
+  }
+
   // clear input fields method: clear all input
   static clearInputFields() {
     document.querySelector("#title").value = "";
@@ -57,6 +59,36 @@ class UI {
 }
 
 // Store Class: Manage Local Storage
+class Store {
+  // getBooks method: get book list from local storage
+  static getBooks() {
+    let books;
+    if (localStorage.getItem("books") === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem("books"));
+    }
+    return books;
+  }
+
+  // addBook method: add the books to the local storage
+  static addBook(book) {
+    const books = Store.getBooks();
+    books.push(book);
+    localStorage.setItem("books", JSON.stringify(books));
+  }
+
+  // remove book method: remove book from local storage
+  static removeBooksFromLocalStorage(isbn) {
+    const books = Store.getBooks();
+    books.forEach((book, index) => {
+      if (book.isbn === isbn) {
+        books.splice(index, 1);
+      }
+    });
+    localStorage.setItem("books", JSON.stringify(books));
+  }
+}
 
 // Event: Display books
 document.addEventListener("DOMContentLoaded", UI.displayBooks);
@@ -74,13 +106,19 @@ bookForm.addEventListener("submit", (e) => {
 
   //input validation checking
   if (title === "" || author === "" || isbn === "") {
-    alert("You've must provide all the input data!");
+    UI.showAlert("You've must provide all the input data!", "danger");
   } else {
     // create a Book class instantiate
     const book = new Book(title, author, isbn);
 
     // add to book list method invoked
     UI.addToBookList(book);
+
+    // add book to local storage
+    Store.addBook(book);
+
+    // show alert for added successfully
+    UI.showAlert("Book Added Successfully.", "success");
 
     // clear input fields method invoked
     UI.clearInputFields();
@@ -92,4 +130,10 @@ const bookList = document.querySelector("#book-list");
 bookList.addEventListener("click", (e) => {
   // remove book from UI method invoked
   UI.removeBookFromUI(e.target);
+
+  // remove book from local storage
+  Store.removeBooksFromLocalStorage(e.target.parentElement.parentElement.previousElementSibling.textContent);
+
+  // show alert for delete
+  UI.showAlert("Book Removed Successfully.", "success");
 });
