@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookList App</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./CSS/custom.css" />
+  </head>
+  <body>
+    <!-- header area start -->
+    <header class="header-area mb-4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-text p-3">
+              <h1 class="text-secondary text-center display-4">
+                <i class="fas fa-book-open text-primary"></i>My<span class="text-primary">Book</span>List
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header area end -->
+
+    <!-- form area start -->
+    <section class="form-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 border border-secondary p-5">
+            <div class="form-element">
+              <form id="book-form">
+                <div class="mb-4">
+                  <label for="title" class="form-label">Book Title</label>
+                  <input type="text" id="title" class="form-control" placeholder="Enter The Book Name..."/>
+                </div>
+                <div class="mb-4">
+                  <label for="author" class="form-label">Author Of Book</label>
+                  <input type="text" id="author" class="form-control" placeholder="Enter The Author Name..."/>
+                </div>
+                <div class="mb-4">
+                  <label for="isbn" class="form-label">ISBN#</label>
+                  <input type="text" id="isbn" class="form-control" placeholder="Enter The ISBN Of Book..."/>
+                </div>
+                <div class="d-grid mt-4">
+                  <button type="submit" class="btn btn-primary">Add Book</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6 border border-secondary p-5">
+            <div class="booklist-data">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Book Name</th>
+                    <th>Author Name</th>
+                    <th>ISBN#</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="book-list"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- form area end -->
+
+    <!-- JavaScript file -->
+    <script src="./JavaScript/bootstrap.bundle.min.js"></script>
+    <script src="./JavaScript/app.js"></script>
+  </body>
+</html>
