@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Application</title>
+    <!-- custom css file -->
+    <link rel="stylesheet" href="./CSS/custom.css" />
+  </head>
+  <body>
+    <div class="employpage">
+      <div class="formdata">
+        <form onsubmit="event.preventDefault();" autocomplete="off">
+          <label>Name</label>
+          <input type="text" class="name" value="" placeholder="Employ Name"/>
+
+          <label>Designation</label>
+          <input type="text" class="designation" value="" placeholder="Employ Designation"/>
+
+          <label>Mobile</label>
+          <input type="text" class="mobile" value="" placeholder="Employ Mobile"/>
+
+          <label>Salary</label>
+          <input type="text" class="salary" value="" placeholder="Employ Salary"/>
+
+          <div style="width: 100%">
+            <input type="submit" value="Submit" class="button" />
+          </div>
+        </form>
+      </div>
+
+      <div class="display_table">
+        <table class="list" id="employeeList">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Full Name</th>
+              <th>Designation</th>
+              <th>Mobile</th>
+              <th>Salary</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- javascript file -->
+    <script src="./JavaScript/app.js"></script>
+  </body>
+</html>
