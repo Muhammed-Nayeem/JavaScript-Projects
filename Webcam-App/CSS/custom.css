@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eadbff;
+  border-radius: 14px;
+}
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+.webcam-area {
+  padding: 50px 0;
+}
+.webcam-title {
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 50px;
+}
+.webcam-title h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #333;
+}
+.webcam-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.webcam-video {
+  flex-basis: 50%;
+  background: #eadbff;
+  box-shadow: 7px 7px 14px #ded0f2, -7px -7px 14px #f6e6ff;
+  padding: 20px;
+}
+/* .webcam-video video {
+  width: 100%;
+  height: 100%;
+} */
