@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f5f5;
+}
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+.bulb-section {
+  background-color: #f5f5f5;
+}
+.bulb-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bulb-title {
+  width: 100%;
+  margin: 60px 0;
+}
+#bulbstatus {
+  font-size: 35px;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.bulbs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.single-bulb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 16%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 5px 5px 11px #e1e1e1, -5px -5px 11px #ffffff;
+  padding: 20px;
+}
+.single-bulb img {
+  width: 90px;
+  height: 150px;
+}
+.buttons .switch {
+  margin: 0 20px;
+  border: 0;
+  outline: none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 5px 5px 11px #e1e1e1, -5px -5px 11px #ffffff;
+}
+#bulbon {
+  color: #06b406;
+  cursor: pointer;
+}
+#bulbof {
+  color: #d42424;
+  cursor: pointer;
+}
