@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: tomato;
+}
+.container {
+  width: 1000px;
+  margin: 100px auto;
+}
+.ccp-section {
+  margin-bottom: 30px;
+}
+input[type="text"] {
+  padding: 10px 20px;
+  border: 0;
+  outline: none;
+}
+input[type="button"] {
+  padding: 10px 15px;
+}
