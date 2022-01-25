@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb On Of</title>
+    <link rel="stylesheet" href="./CSS/custom.css" />
+  </head>
+  <body>
+    <section class="bulb-section">
+      <div class="container">
+        <main class="bulb-box">
+          <article class="bulb-title">
+            <h2 id="bulbstatus">Bulb Off</h2>
+          </article>
+          <div class="bulbs">
+            <div class="single-bulb">
+              <img id="light1" src="./bulboff.gif" alt="bulboff" />
+            </div>
+            <div class="single-bulb">
+              <img id="light2" src="./bulboff.gif" alt="bulboff" />
+            </div>
+            <div class="single-bulb">
+              <img id="light3" src="./bulboff.gif" alt="bulboff" />
+            </div>
+            <div class="single-bulb">
+              <img id="light4" src="./bulboff.gif" alt="bulboff" />
+            </div>
+            <div class="single-bulb">
+              <img id="light5" src="./bulboff.gif" alt="bulboff" />
+            </div>
+            <div class="single-bulb">
+              <img id="light6" src="./bulboff.gif" alt="bulboff" />
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="switch" id="bulbon" onclick="lightStatus(1)">Bulb On</button>
+            <button class="switch" id="bulbof" onclick="lightStatus(0)">Bulb Off</button>
+          </div>
+        </main>
+      </div>
+    </section>
+    <!-- Js file included -->
+    <script src="./JavaScript/script.js"></script>
+  </body>
+</html>
