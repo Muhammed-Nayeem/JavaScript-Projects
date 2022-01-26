@@ -30,17 +30,33 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 30px 0;
 }
-.webcam-video {
-  flex-basis: 50%;
+.webcam-video,
+.webcam-image {
+  flex-basis: 40%;
   background: #eadbff;
   box-shadow: 7px 7px 14px #ded0f2, -7px -7px 14px #f6e6ff;
   padding: 20px;
 }
-/* .webcam-video video {
+.webcam-video video,
+.webcam-image canvas {
   width: 100%;
   height: 100%;
-} */
+}
+.button {
+  text-align: center;
+  margin: 20px 0;
+}
+.button #takephoto {
+  background-color: #333;
+  color: #f6e6ff;
+  border: 0;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+}

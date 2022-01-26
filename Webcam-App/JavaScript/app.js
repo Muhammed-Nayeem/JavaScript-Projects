@@ -13,8 +13,9 @@ const webcamVideo = document.getElementById("video");
 const webCamera = navigator.mediaDevices.getUserMedia;
 
 if (webCamera) {
-  navigator.mediaDevices.getUserMedia({
-      video: {width: 600, height: 400},
+  navigator.mediaDevices
+    .getUserMedia({
+      video: { width: 600, height: 400 },
       audio: true,
     })
     .then((streamLive) => {
@@ -24,3 +25,14 @@ if (webCamera) {
       console.log(error.message);
     });
 }
+
+/**
+ * Phase-Two: WebCam with Image Capturing
+ */
+const imageCanvas = document.getElementById("image-canvas");
+const takePhotoBtn = document.getElementById("takephoto");
+const context = imageCanvas.getContext("2d");
+
+takePhotoBtn.addEventListener("click", () => {
+  context.drawImage(webcamVideo, 0, 0, 750, 700);
+});

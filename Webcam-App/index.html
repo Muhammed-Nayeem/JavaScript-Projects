@@ -16,12 +16,18 @@
           <h3>Webcam</h3>
         </article><!-- webcam title end-->
 
-        <!-- webcam video area start-->
+        <!-- webcam media area start-->
         <main class="webcam-wrapper">
           <article class="webcam-video">
             <video id="video" autoplay="true"></video>
           </article>
-        </main><!-- webcam video area end-->
+          <article class="webcam-image">
+            <canvas id="image-canvas" width="750" height="700"></canvas>
+          </article>
+        </main><!-- webcam media area end-->
+        <div class="button">
+          <button id="takephoto">Take Photo</button>
+        </div>
       </div>
     </section><!-- webcam area end -->
 
