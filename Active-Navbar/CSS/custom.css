@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  color: crimson;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-area {
+  background-color: tomato;
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-area a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-area ul {
+  list-style: none;
+  display: flex;
+}
+.menu-area ul li {
+  margin: 0 15px;
+}
+.menu-area ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 10px 12px;
+  padding: 10px;
+}
+
+.active-menu {
+  background-color: crimson;
+  padding: 10px;
+  color: white !important;
+}
+
+.showcase-area {
+  text-align: center;
+  padding: 50px 0;
+}
