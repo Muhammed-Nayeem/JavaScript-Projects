@@ -24,16 +24,16 @@
                 <div class="product-details">
                   <h3>Cheesy Burger</h3>
                   <p>Size: 4 Layer's</p>
-                  <p>Product Price: $<span id="product-price">120</span></p>
+                  <p>Product Price: $<span id="price1">350</span></p>
                   <div class="quantity-box">
                     <span class="qntty-title">Quantity: </span>
-                    <button class="button"><i class="fas fa-plus"></i></button>
+                    <button class="button" onclick="increment('quantity1','price1', 'item1')"><i class="fas fa-plus"></i></button>
                     <span class="input-box">
-                      <input type="text" id="quantity" value="0" autocomplete="off" readonly>
+                      <input type="text" id="quantity1" value="0" autocomplete="off" readonly>
                     </span>
-                    <button class="button"><i class="fas fa-minus"></i></button>
+                    <button class="button" onclick="decrement('quantity1','price1','item1')"><i class="fas fa-minus"></i></button>
                   </div>
-                  <p>Your Items: $<span id="item-price">00</span></p>
+                  <p>Your Items: $<span id="item1">00</span></p>
                 </div>
               </div>
               <div class="single-shopping">
@@ -43,16 +43,16 @@
                 <div class="product-details">
                   <h3>Chicken Pizza</h3>
                   <p>Size: 12 Inches</p>
-                  <p>Product Price: $<span id="product-price">620</span></p>
+                  <p>Product Price: $<span id="price2">699</span></p>
                   <div class="quantity-box">
                     <span class="qntty-title">Quantity: </span>
-                    <button class="button"><i class="fas fa-plus"></i></button>
+                    <button class="button" onclick="increment('quantity2','price2', 'item2')"><i class="fas fa-plus"></i></button>
                     <span class="input-box">
-                      <input type="text" id="quantity" value="0" autocomplete="off" readonly>
+                      <input type="text" id="quantity2" value="0" autocomplete="off" readonly>
                     </span>
-                    <button class="button"><i class="fas fa-minus"></i></button>
+                    <button class="button" onclick="decrement('quantity2','price2','item2')"><i class="fas fa-minus"></i></button>
                   </div>
-                  <p>Your Items: $<span id="item-price">00</span></p>
+                  <p>Your Items: $<span id="item2">00</span></p>
                 </div>
               </div>
               <div class="single-shopping">
@@ -62,16 +62,16 @@
                 <div class="product-details">
                   <h3>Chicken Hot Dog</h3>
                   <p>Size: 3 Layer's</p>
-                  <p>Product Price: $<span id="product-price">420</span></p>
+                  <p>Product Price: $<span id="price3">450</span></p>
                   <div class="quantity-box">
                     <span class="qntty-title">Quantity: </span>
-                    <button class="button"><i class="fas fa-plus"></i></button>
+                    <button class="button" onclick="increment('quantity3','price3','item3')"><i class="fas fa-plus"></i></button>
                     <span class="input-box">
-                      <input type="text" id="quantity" value="0" autocomplete="off" readonly>
+                      <input type="text" id="quantity3" value="0" autocomplete="off" readonly>
                     </span>
-                    <button class="button"><i class="fas fa-minus"></i></button>
+                    <button class="button" onclick="decrement('quantity3','price3','item3')"><i class="fas fa-minus"></i></button>
                   </div>
-                  <p>Your Items: $<span id="item-price">00</span></p>
+                  <p>Your Items: $<span id="item3">00</span></p>
                 </div>
               </div>
             </div>
@@ -81,15 +81,16 @@
               </div>
               <div class="product-cost">
                 <h2>Product Amount: $<span id="product-amount">00</span></h2>
-                <h2>Delivery Charged: $<span id="charged-amount">00</span></h2>
+                <h2>Delivery Charged: $<span id="charged-amount">20</span></h2>
                 <hr>
                 <h2>Total Amount: $<span id="total-amount">00</span></h2>
+                <hr>
               </div>
               <div class="coupon-box">
                 <h1>Coupon Code</h1>
                 <p>Use this coupon code to $50 discount</p>
                 <div class="coupon-code">
-                  <p>Your Coupon Code: <span id="coupon-code">COUPON-CODE</span></p>
+                  <p>Your Coupon Code: <span id="coupon-code"></span></p>
                   <input type="text" id="coupon-code-input" placeholder="Insert the coupon code">
                   <button type="button" id="apply-btn">Apply</button>
                 </div>
