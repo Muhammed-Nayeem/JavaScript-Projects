@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media || Basic CRUD</title>
+  <!-- font Awesome css file goes here -->
+  <link rel="stylesheet" href="./Fontawesome/css/all.min.css">
+  <!-- custom css file goes here -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- header area start -->
+  <header class="header-area">
+    <div class="container">
+      <main class="header-wrapper">
+        <div class="logo">
+          <a href="#">BASIC CRUD</a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Posts</a></li>
+          </ul>
+        </nav>
+      </main>
+    </div>
+  </header><!-- header area end -->
+
+  <!-- social media area start -->
+  <section class="social-media-area">
+    <div class="container">
+      <main class="media-wrapper">
+        <div class="media-form">
+          <h1>Social Media APP</h1>
+          <form action="" id="form">
+            <label for="post-field">What's on your mind?</label>
+            <textarea name="post-field" id="post-field"></textarea>
+            <span id="status-msg"></span>
+            <input type="submit" value="Post">
+          </form>
+        </div>
+        <div class="media-posts" id="posts">
+          <h1>Your Posts Here</h1>
+          <div class="single-post">
+            <p id="post-text">Post for one</p>
+            <span class="control-icons">
+              <i onclick="editPost(this)" class="fa-solid fa-pen-to-square" id="edit"></i>
+              <i onclick="deletePost(this)" class="fa-solid fa-trash-can" id="trash"></i>
+            </span>
+          </div>
+          <div class="single-post">
+            <p id="post-text">Post for two</p>
+            <span class="control-icons">
+              <i onclick="editPost(this)" class="fa-solid fa-pen-to-square" id="edit"></i>
+              <i onclick="deletePost(this)" class="fa-solid fa-trash-can" id="trash"></i>
+            </span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+  <!-- javascript file goes here -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD OPERATION</title>
+  <link rel="stylesheet" href="./Fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-container">
+    <div class="app-header">
+      <h1 class="text-center text-uppercase h4">smart city member</h1>
+      <span class="d-flex justify-content-between align-items-center text-capitalize text-success" id="add-new-user" data-bs-toggle="modal" data-bs-target="#form">add new member <i class="fas fa-plus"></i></span>
+    </div>
+    <div class="app-title mt-5 mb-4">
+      <h3 class="text-center text-uppercase text-dark fw-bold">member information</h3>
+    </div>
+
+
+    <!-- Modal -->
+    <form class="modal fade" id="form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New User</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label" for="full-name">Full Name: </label>
+              <input class="form-control" type="text" name="first-name" id="full-name" placeholder="Full Name">
+              <span id="error-msg"></span>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="dob">Date Of Birth: </label>
+              <input class="form-control" type="date" name="dob" id="dob">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="prof">Profession: </label>
+              <input class="form-control" type="text" name="prof" id="prof" placeholder="Your Profession">
+            </div class="mb-3">
+            <div class="mb-3">
+              <label class="form-label" for="salary">Salary: </label>
+              <input class="form-control" type="number" name="salary" id="salary" placeholder="Your Salary">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email">Email: </label>
+              <input class="form-control" type="email" name="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="phone">Contact: </label>
+              <input class="form-control" type="number" name="phone" id="phone" placeholder="Contact Number">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success" id="add-btn">Add</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="user-list" id="userList">
+      <div class="single-user" id="singleUser">
+        <table>
+          <thead id="table-header">
+            <tr>
+              <th>First Name</th>
+              <th>Date Of Birth</th>
+              <th>Profession</th>
+              <th>Salary</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>View</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="user-table">
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- js file -->
+  <script src="./Bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

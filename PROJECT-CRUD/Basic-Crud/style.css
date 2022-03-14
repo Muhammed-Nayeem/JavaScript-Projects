@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+/* header area css */
+.header-area {
+  background-color: lightcoral;
+  padding: 20px 0;
+}
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+.header-wrapper .logo a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+  display: block;
+  font-weight: bold;
+}
+.header-wrapper .menu ul {
+  list-style: none;
+  display: flex;
+}
+.header-wrapper .menu ul li {
+  margin: 0 15px;
+}
+.header-wrapper .menu ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.5s;
+  display: inline-block;
+}
+.header-wrapper .menu ul li a:hover {
+  color: green;
+}
+
+/* social media app css */
+.social-media-area {
+  background-color: beige;
+  height: 90vh;
+  padding: 50px 0;
+}
+.media-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.media-form {
+  width: 100%;
+}
+.media-form h1,
+.media-posts h1 {
+  text-transform: capitalize;
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 30px;
+}
+.media-form label {
+  display: block;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.media-form textarea {
+  width: 80%;
+  outline: none;
+  padding: 20px 10px;
+  display: block;
+}
+.media-form #status-msg {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 550;
+  font-size: 18px;
+  display: none;
+}
+.media-form input[type="submit"] {
+  margin-top: 15px;
+  background-color: green;
+  color: white;
+  border: 0;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.media-form input[type="submit"]:hover {
+  background-color: yellowgreen;
+}
+.media-posts {
+  width: 100%;
+}
+.single-post {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 10px 8px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.single-post p {
+  font-size: 16px;
+  color: #333;
+}
+.single-post .control-icons {
+  padding: 0 10px;
+}
+.control-icons i {
+  margin: 0 10px;
+}
+.control-icons #trash {
+  color: red;
+  cursor: pointer;
+}
+.control-icons #edit {
+  color: green;
+  cursor: pointer;
+}
