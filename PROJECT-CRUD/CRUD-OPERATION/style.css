@@ -23,9 +23,14 @@ body {
   background: #e1eadc;
   box-shadow: 14px 14px 28px #d8e1d3, -14px -14px 28px #eaf3e5;
   overflow-y: scroll;
+  overflow-x: scroll;
 }
 .app-container::-webkit-scrollbar {
   display: none;
+}
+.app-header {
+  max-width: 80%;
+  margin: 0 auto;
 }
 .app-header span {
   font-size: 20px;
@@ -67,14 +72,17 @@ body {
 
 /*user table*/
 .user-list {
-  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 .single-user {
   width: 100%;
 }
 .single-user table {
   border: 1px solid #fff;
-  width: 100%;
+  min-width: 100%;
+  margin: 0 auto;
+  overflow-x: scroll;
 }
 .single-user table th {
   border: 1px solid #fff;
@@ -100,7 +108,7 @@ body {
   border-radius: 50%;
   background: linear-gradient(145deg, #cbd3c6, #f1faeb);
   box-shadow: 8px 8px 9px #dde5d8, -8px -8px 9px #e6efe0;
-  transition: .3s;
+  transition: 0.3s;
 }
 .single-user table td i:hover {
   background: linear-gradient(145deg, #f1faeb, #cbd3c6);
@@ -121,6 +129,6 @@ body {
 }
 
 /* modal code goes here */
-.modal-content{
+.modal-content {
   background-color: #e1eadc;
 }
