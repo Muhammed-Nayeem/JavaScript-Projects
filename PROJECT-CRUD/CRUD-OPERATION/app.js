@@ -9,6 +9,7 @@ let phone = document.getElementById("phone");
 let errorMsg = document.getElementById("error-msg");
 let userTable = document.getElementById("user-table");
 let addBtn = document.getElementById("add-btn");
+let modalTitle = document.querySelector(".modal-title");
 
 //add event listener on form:
 form.addEventListener("submit", (ev) => {
@@ -54,6 +55,7 @@ const storeData = () => {
 
 //create user with the collected data and upload on screen:
 const createUser = () => {
+  modalTitle.textContent = "Add New User";
   userTable.innerHTML = "";
   userData.map((user, ind) => {
     return (userTable.innerHTML += `
@@ -75,7 +77,7 @@ const createUser = () => {
 
 //view user information:
 const viewUserInfo = (ev) => {
-
+  modalTitle.textContent = "User Information";
   setAndView(ev);
 
   fullName.setAttribute("readonly", "true");
@@ -89,24 +91,18 @@ const viewUserInfo = (ev) => {
 
 //delete user:
 const deleteUser = (ev) => {
-  ev.parentElement.parentElement.remove();
-  userData.splice(ev.parentElement.parentElement.id, 1);
-  localStorage.setItem("userData", JSON.stringify(userData));
+  let confirmAction = confirm("Are you sure?");
+  if (confirmAction) {
+    updateLocalStorage(ev);
+  }
 };
 
 //edit and update user:
 const editUserInfo = (ev) => {
-
+  modalTitle.textContent = "Edit User Information";
   setAndView(ev);
-
-  fullName.removeAttribute("readonly");
-  dob.removeAttribute("readonly");
-  profession.removeAttribute("readonly");
-  salary.removeAttribute("readonly");
-  email.removeAttribute("readonly");
-  phone.removeAttribute("readonly");
-  addBtn.disabled = false;
-  deleteUser(ev);
+  removeAttribute();
+  updateLocalStorage(ev);
 };
 
 //set and view user info:
@@ -118,6 +114,24 @@ const setAndView = (ev) => {
   salary.value = selectedUser.children[3].innerHTML;
   email.value = selectedUser.children[4].innerHTML;
   phone.value = selectedUser.children[5].innerHTML;
+};
+
+//remove attribute from the form:
+const removeAttribute = () => {
+  fullName.removeAttribute("readonly");
+  dob.removeAttribute("readonly");
+  profession.removeAttribute("readonly");
+  salary.removeAttribute("readonly");
+  email.removeAttribute("readonly");
+  phone.removeAttribute("readonly");
+  addBtn.disabled = false;
+};
+
+//update the user information and every time keep update localStorage data:
+const updateLocalStorage = (ev) => {
+  ev.parentElement.parentElement.remove();
+  userData.splice(ev.parentElement.parentElement.id, 1);
+  localStorage.setItem("userData", JSON.stringify(userData));
 };
 
 //reset the form:
@@ -135,4 +149,3 @@ const resetForm = () => {
   userData = JSON.parse(localStorage.getItem("userData")) || [];
   createUser();
 })();
-
